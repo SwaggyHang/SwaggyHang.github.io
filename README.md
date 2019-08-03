@@ -88,7 +88,7 @@ Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide s
 
 具体这个配置是干嘛的我没仔细深究。
 
-4. 使用hexo写博客
+## 4. 使用hexo写博客
 
 #### 4.1. hexo简介
 
