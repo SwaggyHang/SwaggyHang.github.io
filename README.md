@@ -302,13 +302,13 @@ hexo会帮我们在_posts下生成相关md文件：
 
 ![](http://image.liuxianan.com/201608/20160823_184633_653_1893.png)
 
-## 最终效果
+## 5. 最终效果
 
 可以访问我的博客来查看效果：https://swaggyhang.github.io/
 
 本文仅限入门学习，关于hexo搭建个人博客的更高级玩法大家可以另找教程。
 
-## 参考文章
+## 6. 参考文章
 
 http://www.cnblogs.com/zhcncn/p/4097881.html
 
