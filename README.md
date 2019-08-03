@@ -43,6 +43,7 @@
 绑定域名分2种情况：带www和不带www的。
 
 域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下你的用户名.github.io的IP，然后到你的域名DNS设置页，将A记录指向你ping出来的IP，将CNAME指向你的用户名.github.io，这样可以保证无论是否添加www都可以访问，如下：
+![](http://image.liuxianan.com/201608/20160823_191336_238_8683.png)
 
 然后到你的github项目根目录新建一个名为CNAME的文件（无后缀），里面填写你的域名，加不加www看你自己喜好，因为经测试：
 
@@ -65,7 +66,7 @@
     ssh-keygen -t rsa -C "邮件地址"
 
 然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -> SSH and GPG keys -> New SSH key：
-
+![](http://image.liuxianan.com/201608/20160818_143914_495_9084.png)
 
 
 将刚复制的内容粘贴到key那里，title随便填，保存。
@@ -120,14 +121,14 @@ github: https://github.com/hexojs/hexo
     $ hexo init
 
 hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图：
-
+![](http://image.liuxianan.com/201608/20160818_115922_773_1148.png)
 
 
     $ hexo g # 生成
     $ hexo s # 启动服务
 
 执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的：
-
+![](http://image.liuxianan.com/201608/20160818_120700_028_2426.png)
 
 
 hexo s是开启本地预览服务，打开浏览器访问 http://localhost:4000 即可看到内容，很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端口占用的缘故，因为4000这个端口太常见了，解决端口冲突问题请参考这篇文章：
@@ -136,7 +137,7 @@ http://blog.liuxianan.com/windows-port-bind.html
 
 第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑，打开时就是这个样子：
 
-
+![](http://image.liuxianan.com/201608/20160818_132443_202_6848.png)
 
 #### 4.6. 修改主题
 
@@ -150,7 +151,7 @@ http://blog.liuxianan.com/windows-port-bind.html
     $ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 
 下载后的主题都在这里：
-
+![](http://image.liuxianan.com/201608/20160818_134500_245_0912.png)
 
 
 修改_config.yml中的theme: landscape改为theme: yilia，然后重新执行hexo g来重新生成。
@@ -194,14 +195,14 @@ http://blog.liuxianan.com/windows-port-bind.html
 其它命令不确定，部署这个命令一定要用git bash，否则会提示Permission denied (publickey).
 
 打开你的git bash，输入hexo d就会将本次有改动的代码全部提交，没有改动的不会：
-
+![](http://image.liuxianan.com/201608/20160818_140441_769_5024.png)
 
 
 #### 4.9. 保留CNAME、README.md等文件
 
 提交之后网页上一看，发现以前其它代码都没了，此时不要慌，一些非md文件可以把他们放到source文件夹下，这里的所有文件都会原样复制（除了md文件）到public目录的：
 
-
+![](http://image.liuxianan.com/201608/20160818_141037_580_8035.png)
 
 由于hexo默认会把所有md文件都转换成html，包括README.md，所有需要每次生成之后、上传之前，手动将README.md复制到public目录，并删除README.html。
 
@@ -243,11 +244,11 @@ http://blog.liuxianan.com/windows-port-bind.html
 
 hexo会帮我们在_posts下生成相关md文件：
 
-
+![](http://image.liuxianan.com/201608/20160823_183047_352_1475.png)
 
 我们只需要打开这个文件就可以开始写博客了，默认生成如下内容：
 
-
+![](http://image.liuxianan.com/201608/20160823_183325_470_9306.png)
 
 当然你也可以直接自己新建md文件，用这个命令的好处是帮我们自动生成了时间。
 
@@ -269,13 +270,13 @@ hexo会帮我们在_posts下生成相关md文件：
 
 生成如下：
 
-
+![](http://image.liuxianan.com/201608/20160823_184852_854_6502.png)
 
 最终部署时生成：hexo\public\my-second-blog\index.html，但是它不会作为文章出现在博文目录。
 
 ##### 4.12.1. 写博客工具
 
-那么用什么工具写博客呢？这个我还没去找，以前自己使用editor.md简单弄了个，大家有好用的hexo写博客工具可以推荐个。
+那么用什么工具写博客呢？自己使用的是Typora。
 
 ##### 4.12.2. 如何让博文列表不显示全部内容
 
@@ -295,21 +296,22 @@ hexo会帮我们在_posts下生成相关md文件：
     
     4. 数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；
     5. 博客内容可以轻松打包、转移、发布到其它平台；
-    6. 等等；
     
 
 最终效果：
 
-
+![](http://image.liuxianan.com/201608/20160823_184633_653_1893.png)
 
 ## 最终效果
 
-可以访问我的git博客来查看效果： https://swaggyhang.github.io/
+可以访问我的博客来查看效果：https://swaggyhang.github.io/
 
-不过呢，其实这个博客我只是拿来玩一玩的，没打算真的把它当博客，因为我已经有一个自己的博客了，哈哈！正因如此，本文仅限入门学习，关于hexo搭建个人博客的更高级玩法大家可以另找教程。
+本文仅限入门学习，关于hexo搭建个人博客的更高级玩法大家可以另找教程。
 
-## 参考
+## 参考文章
 
 http://www.cnblogs.com/zhcncn/p/4097881.html
+
 http://www.jianshu.com/p/05289a4bc8b2
+
 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html
